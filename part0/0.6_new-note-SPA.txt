@@ -1,4 +1,4 @@
-title Situation of SPA
+title Situation of New Note in SPA
 
 note over browser: 
 js code of event handler to add new list item to the DOM
