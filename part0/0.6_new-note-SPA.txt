@@ -1,0 +1,17 @@
+title Situation of SPA
+
+note over browser: 
+js code of event handler to add new list item to the DOM
+end note 
+note over browser:
+browser re-render the list 
+end note
+browser->server: HTTP POST to https://studies.cs.helsinki.fi/exampleapp/new_note_spa to send new note 
+note over server: 
+server save the new note data 
+end note 
+
+server->browser: Code 201 (new note was successfully added) 
+
+
+
