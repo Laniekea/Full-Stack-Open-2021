@@ -1,0 +1,33 @@
+title Situation of New Note
+
+browser->server: HTTP POST /new_note with req.body "Hi" when the "save" button is clicked
+note over server: 
+server redirect browser to another URL
+end note 
+
+server->browser: Code 302 
+
+note over browser: 
+browser received the message and send HTTP GET to request notes page
+end note 
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server->browser: HTML
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server->browser: main.js
+
+note over browser:
+browser execute the js code to request JSON data from server
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->browser: data.json in {content, date} object
+
+note over browser: 
+browser re-render
+end note
+
+
+source: https://www.websequencediagrams.com/
